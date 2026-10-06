@@ -1,4 +1,5 @@
 const express = require("express")
+const mongoose = require("mongoose")
 const { Product } = require("../models/Product")
 
 const createProduct = async(req, res) => {
@@ -45,6 +46,7 @@ const getProducts = async(req, res) => {
             brand, 
             minPrice,
             maxPrice,
+            sort,
             page = 1,
             limit = 10,
         } = req.query

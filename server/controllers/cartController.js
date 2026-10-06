@@ -14,7 +14,7 @@ const addToCart = async (req, res) => {
         }
         if (!Number.isInteger(quantity) || quantity < 1) {
             return res.status(400).json({
-                success: true,
+                success: false,
                 message: "Quantity must be positive Integer"
             })
         }
@@ -114,6 +114,6 @@ const getCart = async (req, res) => {
             message: error.message 
         });
     }
-
-    module.exports = { addToCart, getCart };
 }
+
+module.exports = { addToCart, getCart };
