@@ -81,6 +81,34 @@ const orderSchema = new mongoose.Schema(
             type: String,
             enum: ["PENDING", "CONFIRMED", "SHIPPED", "DELIVERED", "CANCELLED"],
             default: "PENDING"
+        },
+
+        fulfillment: {
+            status: {
+                type: String,
+                enum: ["UNFULFILLED", "IN_PROGRESS", "FULFILLED", "FAILED"],
+                default: "UNFULFILLED"
+            },
+            supplier: {
+                type: String,
+                default: "SAMSUNG"
+            },
+            supplierOrderId: {
+                type: String,
+                default: ""
+            },
+            trackingNumber: {
+                type: String,
+                default: ""
+            },
+            checkoutUrl: {
+                type: String,
+                default: ""
+            },
+            notes: {
+                type: String,
+                default: ""
+            }
         }
     },
     { timestamps: true }

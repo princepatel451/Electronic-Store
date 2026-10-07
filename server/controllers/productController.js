@@ -1,6 +1,8 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const { Product } = require("../models/Product")
+const { Category } = require("../models/Category")
+const { scrapeSamsungProduct } = require("../services/samsungService")
 
 const createProduct = async(req, res) => {
     const {
@@ -264,7 +266,98 @@ const deleteProduct = async(req, res) => {
             message: error.message
         })
     }
+}
 
+// Admin: Preview Samsung product from URL before importing
+const previewSamsungProduct = async (req, res) => {
+    try {
+        const { url } = req.body
+        if (!url) {
+            return res.status(400).json({
+                success: false,
+                message: "Samsung product URL is required"
+            })
+        }
+
+        const data = await scrapeSamsungProduct(url)
+
+        res.status(200).json({
+            success: true,
+            preview: data
+        })
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: error.message
+        })
+    }
+}
+
+// Admin: Scrape and import Samsung product into database
+const importSamsungProduct = async (req, res) => {
+    try {
+        const { url, markupPercentage = 0, categoryId, customPrice } = req.body
+
+        if (!url) {
+            return res.status(400).json({
+                success: false,
+                message: "Samsung product URL is required"
+            })
+        }
+
+        const data = await scrapeSamsungProduct(url)
+
+        // Determine price with optional markup
+        let finalPrice = data.price
+        if (customPrice && Number(customPrice) > 0) {
+            finalPrice = Number(customPrice)
+        } else if (markupPercentage && Number(markupPercentage) > 0) {
+            finalPrice = Math.round(data.price * (1 + Number(markupPercentage) / 100))
+        }
+
+        // Determine category: use provided or find/create a Samsung category
+        let category = categoryId
+        if (!category) {
+            let catDoc = await Category.findOne({ name: /samsung|smartphone|mobile/i })
+            if (!catDoc) {
+                catDoc = await Category.create({
+                    name: "Smartphones",
+                    description: "Mobile phones and smart devices"
+                })
+            }
+            category = catDoc._id
+        }
+
+        const product = await Product.create({
+            name: data.name,
+            description: data.description,
+            price: finalPrice,
+            category,
+            brand: "Samsung",
+            stock: data.stock || 10,
+            images: data.images.length > 0 ? data.images : ["https://images.samsung.com/is/image/samsung/assets/in/smartphones/galaxy-s24-ultra/buy/galaxy-s24-ultra-color-titanium-black.png"],
+            supplier: {
+                source: "SAMSUNG",
+                originalUrl: data.originalUrl,
+                modelCode: data.modelCode,
+                originalPrice: data.price,
+                lastSyncedAt: new Date()
+            }
+        })
+
+        await product.populate("category")
+
+        res.status(201).json({
+            success: true,
+            message: "Samsung product imported successfully",
+            product
+        })
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: error.message
+        })
+    }
 }
 
 module.exports = {
@@ -272,5 +365,7 @@ module.exports = {
     getProducts,
     getProductById,
     updateProduct,
-    deleteProduct
+    deleteProduct,
+    previewSamsungProduct,
+    importSamsungProduct
 };

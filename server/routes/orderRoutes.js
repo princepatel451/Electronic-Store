@@ -6,7 +6,9 @@ const {
     cancelOrder,
     getAllOrders,
     updateOrderStatus,
-    updatePaymentStatus
+    updatePaymentStatus,
+    getSamsungFulfillmentPackage,
+    updateFulfillmentStatus
 } = require("../controllers/orderController")
 const { protect } = require("../middlewares/authMiddleware")
 const { admin } = require("../middlewares/adminMiddleware")
@@ -23,5 +25,7 @@ router.put("/:id/cancel", protect, cancelOrder)
 router.get("/", protect, admin, getAllOrders)
 router.put("/:id/status", protect, admin, updateOrderStatus)
 router.put("/:id/payment", protect, admin, updatePaymentStatus)
+router.get("/:id/samsung-fulfillment", protect, admin, getSamsungFulfillmentPackage)
+router.put("/:id/samsung-fulfillment", protect, admin, updateFulfillmentStatus)
 
 module.exports = router

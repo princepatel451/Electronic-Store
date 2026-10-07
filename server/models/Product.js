@@ -13,7 +13,14 @@ const productSchema = new mongoose.Schema({
     stock: { type: Number, required: true, min: 0, default: 0 },
     images: { type: [String], default: [] },
     rating: { type: Number, min: 0, default: 0, max: 5 },
-    numReviews: { type: Number, default: 0 }
+    numReviews: { type: Number, default: 0 },
+    supplier: {
+        source: { type: String, default: "MANUAL" },
+        originalUrl: { type: String, default: "" },
+        modelCode: { type: String, default: "" },
+        originalPrice: { type: Number, default: 0 },
+        lastSyncedAt: { type: Date }
+    }
 },
     { timestamps: true }
 )

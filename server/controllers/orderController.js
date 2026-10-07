@@ -1,6 +1,7 @@
 const Order = require("../models/Order")
 const { Product } = require("../models/Product")
 const Cart = require("../models/Cart")
+const { createSamsungFulfillmentPackage } = require("../services/samsungService")
 
 // Create a new order
 const createOrder = async (req, res) => {
@@ -372,6 +373,76 @@ const updatePaymentStatus = async (req, res) => {
     }
 }
 
+// Admin: Generate 1-Click Samsung Fulfillment Package for an order
+const getSamsungFulfillmentPackage = async (req, res) => {
+    try {
+        const order = await Order.findById(req.params.id)
+            .populate("user", "name email")
+            .populate("items.product")
+
+        if (!order) {
+            return res.status(404).json({
+                success: false,
+                message: "Order not found"
+            })
+        }
+
+        const fulfillmentPackage = createSamsungFulfillmentPackage(order)
+
+        res.status(200).json({
+            success: true,
+            fulfillmentPackage
+        })
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: error.message
+        })
+    }
+}
+
+// Admin: Update Samsung fulfillment status (tracking number, supplier order ID)
+const updateFulfillmentStatus = async (req, res) => {
+    try {
+        const { status, supplierOrderId, trackingNumber, notes } = req.body
+
+        const order = await Order.findById(req.params.id)
+        if (!order) {
+            return res.status(404).json({
+                success: false,
+                message: "Order not found"
+            })
+        }
+
+        if (!order.fulfillment) {
+            order.fulfillment = {}
+        }
+
+        if (status) order.fulfillment.status = status
+        if (supplierOrderId !== undefined) order.fulfillment.supplierOrderId = supplierOrderId
+        if (trackingNumber !== undefined) order.fulfillment.trackingNumber = trackingNumber
+        if (notes !== undefined) order.fulfillment.notes = notes
+
+        // If marked fulfilled on Samsung, update customer order status to SHIPPED
+        if (status === "FULFILLED" && order.orderStatus !== "DELIVERED") {
+            order.orderStatus = "SHIPPED"
+        }
+
+        await order.save()
+
+        res.status(200).json({
+            success: true,
+            message: "Fulfillment updated successfully",
+            order
+        })
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: error.message
+        })
+    }
+}
+
 module.exports = {
     createOrder,
     getMyOrders,
@@ -379,5 +450,7 @@ module.exports = {
     cancelOrder,
     getAllOrders,
     updateOrderStatus,
-    updatePaymentStatus
+    updatePaymentStatus,
+    getSamsungFulfillmentPackage,
+    updateFulfillmentStatus
 }
