@@ -1,12 +1,5 @@
-export { CartPage } from './CartPage'
-export { CheckoutPage } from './CheckoutPage'
-export { OrderDetailsPage } from './OrderDetailsPage'
-export { MyOrdersPage } from './MyOrdersPage'
-export { ProfilePage } from './ProfilePage'
-
-// Aliases for compatibility
-export { CartPage as Cart }
-export { CheckoutPage as Checkout }
-export { OrderDetailsPage as OrderDetails }
-export { MyOrdersPage as MyOrders }
-export { ProfilePage as Profile }
+export { CartPage, CartPage as Cart } from './CartPage'
+export { CheckoutPage, CheckoutPage as Checkout } from './CheckoutPage'
+export { OrderDetailsPage, OrderDetailsPage as OrderDetails } from './OrderDetailsPage'
+export { MyOrdersPage, MyOrdersPage as MyOrders } from './MyOrdersPage'
+export { ProfilePage, ProfilePage as Profile } from './ProfilePage'

@@ -1,9 +1,4 @@
-export { AdminOrdersPage } from './AdminOrdersPage'
-export { AdminProductsPage } from './AdminProductsPage'
-export { AdminUsersPage } from './AdminUsersPage'
+export { AdminOrdersPage, AdminOrdersPage as AdminOrders } from './AdminOrdersPage'
+export { AdminProductsPage, AdminProductsPage as AdminProducts } from './AdminProductsPage'
+export { AdminUsersPage, AdminUsersPage as AdminUsers } from './AdminUsersPage'
 export { AdminShell, AdminTable } from './AdminShell'
-
-// Aliases for compatibility
-export { AdminOrdersPage as AdminOrders }
-export { AdminProductsPage as AdminProducts }
-export { AdminUsersPage as AdminUsers }
