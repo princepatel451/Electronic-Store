@@ -8,7 +8,7 @@ const createCategory = async(req, res) => {
 
         res.status(201).json({
             success: true,
-            message: "Category created successfullly",
+            message: "Category created successfully",
             category
         })
     }
@@ -75,12 +75,13 @@ const updateCategory = async(req, res) => {
         if(!category){
             return res.status(404).json({
                 success: false,
-                message: "Catgory not found"
+                message: "Category not found"
             })
         }
 
-        res.status(200).josn({
+        res.status(200).json({
             success: true,
+            message: "Category updated successfully",
             category
         })
     }
@@ -98,9 +99,9 @@ const deleteCategory = async(req, res) => {
         const category = await Category.findByIdAndDelete(req.params.id)
         
         if(!category){
-            return res.status(400).json({
+            return res.status(404).json({
                 success: false,
-                message : "Category not found"
+                message: "Category not found"
             })
         }
         

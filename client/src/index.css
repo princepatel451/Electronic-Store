@@ -1,0 +1,12 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{@apply bg-white text-ink font-sans antialiased;letter-spacing:-.01em}
+h1,h2,h3{letter-spacing:-.03em}
+:focus-visible{outline:2px solid #0071e3;outline-offset:2px}
+@layer components{
+.btn{@apply inline-flex items-center justify-center rounded-full bg-blue px-6 py-2.5 text-sm text-white transition hover:bg-[#0077ed] disabled:opacity-40}
+.btn-ghost{@apply inline-flex items-center justify-center rounded-full border border-blue px-6 py-2.5 text-sm text-blue transition hover:bg-blue hover:text-white}
+.input{@apply w-full rounded-xl border border-neutral-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue focus:ring-4 focus:ring-blue/15}
+.wrap{@apply mx-auto max-w-6xl px-5}
+.card{@apply rounded-3xl bg-snow p-6}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
