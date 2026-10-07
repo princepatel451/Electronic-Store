@@ -6,13 +6,13 @@ const { Product } = require("../models/Product")
 const { Category } = require("../models/Category")
 
 const categoriesData = [
-  { name: "Smartphones", description: "Flagship and premium mobile phones from world-class brands", image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80" },
-  { name: "Laptops", description: "Performance ultrabooks, creator workstations, and gaming laptops", image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&auto=format&fit=crop&q=80" },
-  { name: "Tablets", description: "Versatile tablets for productivity, digital drawing, and entertainment", image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&auto=format&fit=crop&q=80" },
-  { name: "Smartwatches", description: "Fitness trackers and luxury connected timepieces", image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80" },
-  { name: "Audio & Headphones", description: "Noise-cancelling headphones, audiophile monitors, and wireless earbuds", image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80" },
-  { name: "Gaming & Consoles", description: "Next-gen consoles, handheld gaming PCs, and gaming gear", image: "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=600&auto=format&fit=crop&q=80" },
-  { name: "Smart TVs", description: "4K OLED, QLED, and Mini-LED cinema displays", image: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=600&auto=format&fit=crop&q=80" }
+  { name: "Smartphones", description: "Flagship and premium mobile phones from world-class brands", image: "https://m.media-amazon.com/images/I/71R8VsJ07nL._SL1500_.jpg" },
+  { name: "Laptops", description: "Performance ultrabooks, creator workstations, and gaming laptops", image: "https://m.media-amazon.com/images/I/61Ten0JgxQL._SL1500_.jpg" },
+  { name: "Tablets", description: "Versatile tablets for productivity, digital drawing, and entertainment", image: "https://m.media-amazon.com/images/I/71kqkb77SjL._SL1500_.jpg" },
+  { name: "Smartwatches", description: "Fitness trackers and luxury connected timepieces", image: "https://m.media-amazon.com/images/I/81V3wgQBeuL._SL1500_.jpg" },
+  { name: "Audio & Headphones", description: "Noise-cancelling headphones, audiophile monitors, and wireless earbuds", image: "https://m.media-amazon.com/images/I/71ncxKR-6OL._SL1500_.jpg" },
+  { name: "Gaming & Consoles", description: "Next-gen consoles, handheld gaming PCs, and gaming gear", image: "https://m.media-amazon.com/images/I/71TucbUXCHL._SL1500_.jpg" },
+  { name: "Smart TVs", description: "4K OLED, QLED, and Mini-LED cinema displays", image: "https://m.media-amazon.com/images/I/81udrKi0c3L._SL1500_.jpg" }
 ]
 
 const rawProducts = [
@@ -25,7 +25,7 @@ const rawProducts = [
     stock: 25,
     rating: 4.9,
     numReviews: 320,
-    images: ["https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-9inch-deserttitanium?wid=940&hei=1112&fmt=png-alpha&qlt=80"],
+    images: ["https://m.media-amazon.com/images/I/71R8VsJ07nL._SL1500_.jpg"],
     description: "iPhone 16 Pro Max features a Grade 5 Titanium design with the A18 Pro chip, 48MP Fusion camera with 5x optical telephoto, and Camera Control."
   },
   {
@@ -36,7 +36,7 @@ const rawProducts = [
     stock: 30,
     rating: 4.7,
     numReviews: 240,
-    images: ["https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-ultramarine?wid=940&hei=1112&fmt=png-alpha&qlt=80"],
+    images: ["https://m.media-amazon.com/images/I/712SuRmHG4L._SL1500_.jpg"],
     description: "Built for Apple Intelligence with the all-new A18 chip, Camera Control, 48MP Fusion camera, and 5 vibrant color-infused back glass finishes."
   },
   {
@@ -47,7 +47,7 @@ const rawProducts = [
     stock: 35,
     rating: 4.8,
     numReviews: 480,
-    images: ["https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-blue?wid=940&hei=1112&fmt=png-alpha&qlt=80"],
+    images: ["https://m.media-amazon.com/images/I/712SuRmHG4L._SL1500_.jpg"],
     description: "Dynamic Island, 48MP Main camera with 2x Telephoto, durable color-infused glass and aluminum design with USB-C."
   },
   {
@@ -102,7 +102,7 @@ const rawProducts = [
     stock: 15,
     rating: 4.9,
     numReviews: 180,
-    images: ["https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ultra-black-titanium-ocean-darkgrey-select-202409?wid=940&hei=1112&fmt=png-alpha&qlt=80"],
+    images: ["https://m.media-amazon.com/images/I/81V3wgQBeuL._SL1500_.jpg"],
     description: "Rugged 49mm aerospace titanium case, brightest 3000-nit display, precision dual-frequency GPS, and up to 72 hours of battery life."
   },
   {
@@ -113,7 +113,7 @@ const rawProducts = [
     stock: 30,
     rating: 4.8,
     numReviews: 210,
-    images: ["https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/s10-case-jetblack-sport-band-black-select-202409?wid=940&hei=1112&fmt=png-alpha&qlt=80"],
+    images: ["https://m.media-amazon.com/images/I/61jsStDo4CL._SL1500_.jpg"],
     description: "Thinnest Apple Watch ever with the largest, most advanced wide-angle OLED display, sleep apnea notifications, and fast charging."
   },
   {
@@ -124,7 +124,7 @@ const rawProducts = [
     stock: 45,
     rating: 4.8,
     numReviews: 460,
-    images: ["https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MTJV3?wid=1144&hei=1144&fmt=jpeg&qlt=90"],
+    images: ["https://m.media-amazon.com/images/I/710T1sZiT7L._SL1500_.jpg"],
     description: "Up to 2x more Active Noise Cancellation, Adaptive Audio, Transparency mode, and MagSafe charging case with USB-C and speaker."
   },
   {
@@ -135,7 +135,7 @@ const rawProducts = [
     stock: 14,
     rating: 4.7,
     numReviews: 130,
-    images: ["https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-max-select-202409-midnight?wid=940&hei=1112&fmt=png-alpha&qlt=80"],
+    images: ["https://m.media-amazon.com/images/I/71ncxKR-6OL._SL1500_.jpg"],
     description: "High-fidelity audio with custom dynamic driver, Active Noise Cancellation with Transparency mode, and knit-mesh canopy headband."
   },
   {
@@ -146,7 +146,7 @@ const rawProducts = [
     stock: 20,
     rating: 4.8,
     numReviews: 85,
-    images: ["https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mac-mini-hero-202301?wid=904&hei=840&fmt=jpeg&qlt=90"],
+    images: ["https://m.media-amazon.com/images/I/51NBurcRq2L._SL1500_.jpg"],
     description: "Desktop power in a compact 7.7-inch square enclosure. Powered by M2 with up to 24GB unified memory and dual Thunderbolt 4 ports."
   },
 
@@ -159,7 +159,7 @@ const rawProducts = [
     stock: 28,
     rating: 4.9,
     numReviews: 410,
-    images: ["https://images.samsung.com/is/image/samsung/p6pim/in/2401/gallery/in-galaxy-s24-s928-sm-s928bztcins-thumb-539573039?$216_216_PNG$"],
+    images: ["https://m.media-amazon.com/images/I/71HReMsMPrL._SL1500_.jpg"],
     description: "Galaxy AI is here. Titanium frame, 200MP camera system, built-in S Pen, and Snapdragon 8 Gen 3 for Galaxy processor."
   },
   {
@@ -170,7 +170,7 @@ const rawProducts = [
     stock: 22,
     rating: 4.7,
     numReviews: 190,
-    images: ["https://images.samsung.com/is/image/samsung/p6pim/in/2401/gallery/in-galaxy-s24-plus-492656-sm-s926bzkcins-thumb-539572421?$216_216_PNG$"],
+    images: ["https://m.media-amazon.com/images/I/7114RlvzXnL._SL1500_.jpg"],
     description: "6.7-inch QHD+ Dynamic AMOLED 2X display with Circle to Search, Live Translate, Armor Aluminum frame, and 4900mAh battery."
   },
   {
@@ -181,7 +181,7 @@ const rawProducts = [
     stock: 14,
     rating: 4.8,
     numReviews: 88,
-    images: ["https://images.samsung.com/is/image/samsung/p6pim/in/2407/gallery/in-galaxy-z-fold6-f956-sm-f956bzkains-thumb-542371970?$216_216_PNG$"],
+    images: ["https://m.media-amazon.com/images/I/619Z1QHCy-L._SL1500_.jpg"],
     description: "Ultra-slim foldable with symmetrical bezels, dual AMOLED screens, S Pen fold edition support, and Galaxy AI multi-window multitasking."
   },
   {
@@ -192,7 +192,7 @@ const rawProducts = [
     stock: 19,
     rating: 4.6,
     numReviews: 145,
-    images: ["https://images.samsung.com/is/image/samsung/p6pim/in/2407/gallery/in-galaxy-z-flip6-f741-sm-f741bzkains-thumb-542371302?$216_216_PNG$"],
+    images: ["https://m.media-amazon.com/images/I/619Z1QHCy-L._SL1500_.jpg"],
     description: "Compact clamshell folding phone with 3.4-inch FlexWindow, 50MP upgraded camera, vapor chamber cooling, and FlexCam hands-free framing."
   },
   {
@@ -203,7 +203,7 @@ const rawProducts = [
     stock: 40,
     rating: 4.5,
     numReviews: 310,
-    images: ["https://images.samsung.com/is/image/samsung/p6pim/in/sm-s711blgkins/gallery/in-galaxy-s23-fe-s711-sm-s711blgkins-thumb-538600863?$216_216_PNG$"],
+    images: ["https://m.media-amazon.com/images/I/71qGismu6NL._SL1500_.jpg"],
     description: "Flagship-grade 50MP camera, 120Hz Dynamic AMOLED display, water & dust resistance, and premium Gorilla Glass 5 finish."
   },
   {
@@ -214,7 +214,7 @@ const rawProducts = [
     stock: 10,
     rating: 4.8,
     numReviews: 70,
-    images: ["https://images.samsung.com/is/image/samsung/p6pim/in/np960qgk-kg1in/gallery/in-galaxy-book4-pro-360-np960qgk-np960qgk-kg1in-thumb-539958788?$216_216_PNG$"],
+    images: ["https://m.media-amazon.com/images/I/714WVl1GG8L._SL1500_.jpg"],
     description: "2-in-1 touchscreen laptop powered by Intel Core Ultra 7 processor, Dynamic AMOLED 2X 120Hz screen, and bundled S Pen."
   },
   {
@@ -225,7 +225,7 @@ const rawProducts = [
     stock: 15,
     rating: 4.9,
     numReviews: 95,
-    images: ["https://images.samsung.com/is/image/samsung/p6pim/in/sm-x910nzaainu/gallery/in-galaxy-tab-s9-ultra-wifi-x910-sm-x910nzaainu-thumb-537754388?$216_216_PNG$"],
+    images: ["https://m.media-amazon.com/images/I/71XsGusqSWL._SL1500_.jpg"],
     description: "Massive 14.6-inch Dynamic AMOLED 2X display, IP68 water resistance, Snapdragon 8 Gen 2 for Galaxy, and low-latency S Pen included."
   },
   {
@@ -236,7 +236,7 @@ const rawProducts = [
     stock: 16,
     rating: 4.7,
     numReviews: 80,
-    images: ["https://images.samsung.com/is/image/samsung/p6pim/in/2407/gallery/in-galaxy-watch-ultra-l705-sm-l705fdaains-thumb-542385153?$216_216_PNG$"],
+    images: ["https://m.media-amazon.com/images/I/81oGeBcCglL._SL1500_.jpg"],
     description: "Cushion titanium design, dual-frequency GPS, multi-sport tracking, emergency siren, and 100-hour battery saver mode."
   },
   {
@@ -247,7 +247,7 @@ const rawProducts = [
     stock: 25,
     rating: 4.6,
     numReviews: 120,
-    images: ["https://images.samsung.com/is/image/samsung/p6pim/in/2407/gallery/in-galaxy-watch7-l300-sm-l300nzkains-thumb-542383850?$216_216_PNG$"],
+    images: ["https://m.media-amazon.com/images/I/619tP9hJ1sL._SL1500_.jpg"],
     description: "Powered by a 3nm processor, Energy Score, Sleep Apnea detection, dual-frequency GPS, and BioActive sensor monitoring."
   },
   {
@@ -258,7 +258,7 @@ const rawProducts = [
     stock: 35,
     rating: 4.6,
     numReviews: 160,
-    images: ["https://images.samsung.com/is/image/samsung/p6pim/in/2407/gallery/in-galaxy-buds3-pro-r630-sm-r630nzaains-thumb-542387063?$216_216_PNG$"],
+    images: ["https://m.media-amazon.com/images/I/51uxqujOBKL._SL1500_.jpg"],
     description: "Blade lights design, 24-bit Hi-Fi audio, enhanced dual-way speakers with planar tweeters, and Adaptive Noise Control with Galaxy AI."
   },
   {
@@ -293,7 +293,7 @@ const rawProducts = [
     stock: 24,
     rating: 4.8,
     numReviews: 290,
-    images: ["https://oasis.opstatics.com/content/dam/oasis/page/2024/01/12/specs/green-img.png"],
+    images: ["https://m.media-amazon.com/images/I/71K0aSeGDBL._SL1500_.jpg"],
     description: "Snapdragon 8 Gen 3, 4th Gen Hasselblad Camera for Mobile, 2K 120Hz ProXDR display, and 5400mAh battery with 100W SUPERVOOC charging."
   },
   {
@@ -304,7 +304,7 @@ const rawProducts = [
     stock: 35,
     rating: 4.7,
     numReviews: 380,
-    images: ["https://oasis.opstatics.com/content/dam/oasis/page/2024/01/12r/specs/blue.png"],
+    images: ["https://m.media-amazon.com/images/I/71K0aSeGDBL._SL1500_.jpg"],
     description: "Snapdragon 8 Gen 2, 4th Gen 1.5K 120Hz LTPO display, massive 5500mAh battery with 100W fast charge, and dual vapor chamber cooling."
   },
   {
@@ -315,7 +315,7 @@ const rawProducts = [
     stock: 12,
     rating: 4.9,
     numReviews: 105,
-    images: ["https://oasis.opstatics.com/content/dam/oasis/page/2023/open/specs/black.png"],
+    images: ["https://m.media-amazon.com/images/I/61f5ZCuSD6L._SL1500_.jpg"],
     description: "Ultra-lightweight aerospace foldable, Sony LYT-T808 Pixel Stacked sensor with Hasselblad optics, and Open Canvas multitasking."
   },
   {
@@ -326,7 +326,7 @@ const rawProducts = [
     stock: 40,
     rating: 4.6,
     numReviews: 210,
-    images: ["https://oasis.opstatics.com/content/dam/oasis/page/2024/nord-4/specs/silver.png"],
+    images: ["https://m.media-amazon.com/images/I/71K0aSeGDBL._SL1500_.jpg"],
     description: "All-metal unibody smartphone with Snapdragon 7+ Gen 3, 5500mAh battery, 100W fast charging, and 4 years of OS updates."
   },
   {
@@ -337,7 +337,7 @@ const rawProducts = [
     stock: 20,
     rating: 4.7,
     numReviews: 90,
-    images: ["https://oasis.opstatics.com/content/dam/oasis/page/2024/pad-2/specs/gray.png"],
+    images: ["https://m.media-amazon.com/images/I/61hqS5gsaBL._SL1500_.jpg"],
     description: "12.1-inch 3K 144Hz display, Snapdragon 8 Gen 3 flagship chipset, 6-speaker surround sound, and stylus support."
   },
   {
@@ -348,7 +348,7 @@ const rawProducts = [
     stock: 25,
     rating: 4.7,
     numReviews: 130,
-    images: ["https://oasis.opstatics.com/content/dam/oasis/page/2024/watch-2/specs/black.png"],
+    images: ["https://m.media-amazon.com/images/I/61dywKQasaL._SL1500_.jpg"],
     description: "Dual-engine architecture with Snapdragon W5 and BES2700, Wear OS by Google, sapphire crystal glass, and 100-hour battery life."
   },
   {
@@ -359,7 +359,7 @@ const rawProducts = [
     stock: 30,
     rating: 4.5,
     numReviews: 110,
-    images: ["https://oasis.opstatics.com/content/dam/oasis/page/2024/watch-2r/specs/gunmetal.png"],
+    images: ["https://m.media-amazon.com/images/I/61dywKQasaL._SL1500_.jpg"],
     description: "Lightweight aluminum body, Wear OS by Google, dual-frequency GPS, health metrics tracking, and 100 hours of battery life."
   },
   {
@@ -370,7 +370,7 @@ const rawProducts = [
     stock: 45,
     rating: 4.8,
     numReviews: 175,
-    images: ["https://oasis.opstatics.com/content/dam/oasis/page/2024/buds-pro-3/specs/black.png"],
+    images: ["https://m.media-amazon.com/images/I/61SuuPF108L._SL1500_.jpg"],
     description: "Co-created with Dynaudio. Dual drivers, 50dB adaptive noise cancellation, dual DACs, and up to 43 hours of playback."
   },
   {
@@ -381,7 +381,7 @@ const rawProducts = [
     stock: 50,
     rating: 4.4,
     numReviews: 240,
-    images: ["https://oasis.opstatics.com/content/dam/oasis/page/2024/nord-buds-3-pro/specs/starry-black.png"],
+    images: ["https://m.media-amazon.com/images/I/61SuuPF108L._SL1500_.jpg"],
     description: "Hybrid active noise cancellation up to 49dB, 12.4mm titanized diaphragm drivers, BassWave 2.0, and 44-hour battery life."
   },
   {
@@ -392,7 +392,7 @@ const rawProducts = [
     stock: 60,
     rating: 4.8,
     numReviews: 150,
-    images: ["https://oasis.opstatics.com/content/dam/oasis/page/2023/accessories/100w-adapter.png"],
+    images: ["https://m.media-amazon.com/images/I/61tyyc8hesL._SL1500_.jpg"],
     description: "Dual ports (Type-C & Type-A) with 100W maximum output, PD fast charging protocol support, and smart thermal protection."
   },
 
@@ -405,7 +405,7 @@ const rawProducts = [
     stock: 15,
     rating: 4.9,
     numReviews: 120,
-    images: ["https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/81DnIkF7FsL._SL1500_.jpg"],
     description: "World's first quad main camera with dual periscope telephotos, 1-inch Sony LYT-900 sensor, Hasselblad portrait system, and Snapdragon 8 Gen 3."
   },
   {
@@ -416,7 +416,7 @@ const rawProducts = [
     stock: 28,
     rating: 4.6,
     numReviews: 195,
-    images: ["https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/61XS3YRaPsL._SL1500_.jpg"],
     description: "Quad-curved Infinite View screen with AI Eraser 2.0, 50MP Sony flagship selfie camera, Dimensity 7300-Energy, and 80W SUPERVOOC."
   },
   {
@@ -427,7 +427,7 @@ const rawProducts = [
     stock: 30,
     rating: 4.5,
     numReviews: 140,
-    images: ["https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71K0aSeGDBL._SL1500_.jpg"],
     description: "Sleek aerodynamic design, Splash Touch display, AI Best Face for group selfies, and ultra-durable High-Strength Alloy Frame."
   },
   {
@@ -438,7 +438,7 @@ const rawProducts = [
     stock: 12,
     rating: 4.7,
     numReviews: 85,
-    images: ["https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/517h1ScmuQL._SL1500_.jpg"],
     description: "Triple Hasselblad camera system on a flip phone with telephoto lens, intuitive vertical cover screen, and Flexion hinge."
   },
   {
@@ -449,7 +449,7 @@ const rawProducts = [
     stock: 35,
     rating: 4.6,
     numReviews: 220,
-    images: ["https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71qxIwmnLsL._SL1500_.jpg"],
     description: "India's first IP69 waterproof smartphone with 360-degree Armour Body, 3D Curved AMOLED screen, and vegan leather back."
   },
   {
@@ -460,7 +460,7 @@ const rawProducts = [
     stock: 18,
     rating: 4.7,
     numReviews: 70,
-    images: ["https://images.unsplash.com/photo-1561154464-82e9adf32764?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71XsGusqSWL._SL1500_.jpg"],
     description: "7:5 ReadFit display aspect ratio, 144Hz ultra-high refresh rate, MediaTek Dimensity 9000, and Dolby Vision with quad speakers."
   },
   {
@@ -471,7 +471,7 @@ const rawProducts = [
     stock: 30,
     rating: 4.7,
     numReviews: 160,
-    images: ["https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/51uxqujOBKL._SL1500_.jpg"],
     description: "Co-developed with Dynaudio. SuperDBEE coaxial dual drivers, LHDC 4.0 Hi-Res audio, and 45dB deep active noise cancellation."
   },
   {
@@ -482,7 +482,7 @@ const rawProducts = [
     stock: 16,
     rating: 4.6,
     numReviews: 80,
-    images: ["https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/61dywKQasaL._SL1500_.jpg"],
     description: "Stainless steel chassis, sapphire crystal display, Wear OS by Google, professional badminton mode, and 100-hour battery life."
   },
 
@@ -495,7 +495,7 @@ const rawProducts = [
     stock: 18,
     rating: 4.9,
     numReviews: 210,
-    images: ["https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/61XS3YRaPsL._SL1500_.jpg"],
     description: "Zeiss 1-inch main camera with APO floating telephoto, Vivo V3 imaging chip, Dimensity 9300 SoC, and 100W FlashCharge."
   },
   {
@@ -506,7 +506,7 @@ const rawProducts = [
     stock: 10,
     rating: 4.9,
     numReviews: 65,
-    images: ["https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/7114RlvzXnL._SL1500_.jpg"],
     description: "India's slimmest & lightest foldable with IPX8 waterproofing, Snapdragon 8 Gen 3, Zeiss optics, and dual ultrasonic fingerprint scanners."
   },
   {
@@ -517,7 +517,7 @@ const rawProducts = [
     stock: 25,
     rating: 4.7,
     numReviews: 180,
-    images: ["https://images.unsplash.com/photo-1567581935884-3349723552ca?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71K0aSeGDBL._SL1500_.jpg"],
     description: "Zeiss Multifocal Portrait camera with 50MP Sony sensors on all cameras, 5500mAh BlueVolt battery, and IP68 dust & water resistance."
   },
   {
@@ -528,7 +528,7 @@ const rawProducts = [
     stock: 30,
     rating: 4.6,
     numReviews: 215,
-    images: ["https://images.unsplash.com/photo-1512054502232-10a0a035d672?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71K0aSeGDBL._SL1500_.jpg"],
     description: "Super slim 7.58mm 3D curved body with 5500mAh battery, Zeiss Aura Light portrait system, and Snapdragon 7 Gen 3."
   },
   {
@@ -539,7 +539,7 @@ const rawProducts = [
     stock: 32,
     rating: 4.7,
     numReviews: 160,
-    images: ["https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71K0aSeGDBL._SL1500_.jpg"],
     description: "Dimensity 9200+ flagship processor, 1.5K 120Hz 3D curved AMOLED screen, 50MP Sony IMX921 sensor with OIS, and 80W charging."
   },
   {
@@ -550,7 +550,7 @@ const rawProducts = [
     stock: 40,
     rating: 4.6,
     numReviews: 290,
-    images: ["https://images.unsplash.com/photo-1591337676887-a217a6970a8a?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71K0aSeGDBL._SL1500_.jpg"],
     description: "Segment's brightest 4500 nits curved display, 5500mAh battery, Snapdragon 7 Gen 3, and vegan leather finish."
   },
   {
@@ -561,7 +561,7 @@ const rawProducts = [
     stock: 50,
     rating: 4.3,
     numReviews: 180,
-    images: ["https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/710T1sZiT7L._SL1500_.jpg"],
     description: "Intelligent active noise cancellation, 11mm high-res sound unit, DeepX 3.0 stereo sound effects, and 42-hour total playback."
   },
   {
@@ -572,7 +572,7 @@ const rawProducts = [
     stock: 20,
     rating: 4.5,
     numReviews: 60,
-    images: ["https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71kqkb77SjL._SL1500_.jpg"],
     description: "11.5-inch 2.8K 144Hz high-refresh rate screen, Snapdragon 870 processor, quad-speaker super audio system, and 8500mAh battery."
   },
 
@@ -585,7 +585,7 @@ const rawProducts = [
     stock: 25,
     rating: 4.8,
     numReviews: 320,
-    images: ["https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/61o9FFbUEJL._SL1500_.jpg"],
     description: "India's first Snapdragon 8 Gen 3 smartphone. Supercomputing Chip Q1, 50MP periscope telephoto with 100x zoom, and 120W FlashCharge."
   },
   {
@@ -596,7 +596,7 @@ const rawProducts = [
     stock: 35,
     rating: 4.8,
     numReviews: 410,
-    images: ["https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71K0aSeGDBL._SL1500_.jpg"],
     description: "Dual chip powerhouse with Snapdragon 8 Gen 2 and Supercomputing Q1 chip, Sony IMX920 50MP camera, and 144Hz LTPO AMOLED."
   },
   {
@@ -607,7 +607,7 @@ const rawProducts = [
     stock: 45,
     rating: 4.7,
     numReviews: 280,
-    images: ["https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/618IOq-RikL._SL1500_.jpg"],
     description: "Snapdragon 7 Gen 3, 5500mAh battery with 80W charging, 50MP Sony IMX882 camera with OIS, and 3D curved 120Hz display."
   },
   {
@@ -618,7 +618,7 @@ const rawProducts = [
     stock: 50,
     rating: 4.6,
     numReviews: 350,
-    images: ["https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/618IOq-RikL._SL1500_.jpg"],
     description: "MediaTek Dimensity 7200 processor, 5000mAh battery with 44W charging, Sony OIS camera, and ultra-bright 1800-nit AMOLED."
   },
   {
@@ -629,7 +629,7 @@ const rawProducts = [
     stock: 40,
     rating: 4.4,
     numReviews: 125,
-    images: ["https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/51uxqujOBKL._SL1500_.jpg"],
     description: "Active Noise Cancellation up to 30dB, 44 hours of total battery life, 55ms low latency gaming mode, and Monster Sound tuning."
   },
   {
@@ -640,7 +640,7 @@ const rawProducts = [
     stock: 30,
     rating: 4.6,
     numReviews: 90,
-    images: ["https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/61Go0xLXaDL._SL1500_.jpg"],
     description: "Semiconductor mobile phone cooler with dual peltier chips, RGB lighting, and rapid temperature drop of up to 15 degrees."
   },
 
@@ -653,7 +653,7 @@ const rawProducts = [
     stock: 12,
     rating: 4.9,
     numReviews: 110,
-    images: ["https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71Fz6SvBTRL._SL1500_.jpg"],
     description: "Intel Core Ultra 7 155H with Intel Arc graphics, 2.8K 120Hz OLED touchscreen, 9MP AI camera with night mode, and rechargeable stylus."
   },
   {
@@ -664,7 +664,7 @@ const rawProducts = [
     stock: 10,
     rating: 4.8,
     numReviews: 75,
-    images: ["https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/81tmCrtiRgL._SL1500_.jpg"],
     description: "World's lightest 14-inch gaming laptop. Intel Core Ultra 9, NVIDIA GeForce RTX 4070 8GB, 2.8K 120Hz OLED, and HyperX audio tuning."
   },
   {
@@ -675,7 +675,7 @@ const rawProducts = [
     stock: 20,
     rating: 4.6,
     numReviews: 185,
-    images: ["https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/313p9ZcJvHL._SL1500_.jpg"],
     description: "Intel Core i7 13th Gen, 15.6-inch FHD touch display, IMAX Enhanced certified audio, and 5MP IR webcam with privacy shutter."
   },
   {
@@ -686,7 +686,7 @@ const rawProducts = [
     stock: 25,
     rating: 4.7,
     numReviews: 210,
-    images: ["https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/31MrCemFpjL._SL1500_.jpg"],
     description: "Lightweight aluminum chassis, AMD Ryzen 7 7840U, 2.8K 120Hz OLED screen with 500 nits HDR, and B&O tuned speakers."
   },
   {
@@ -697,7 +697,7 @@ const rawProducts = [
     stock: 30,
     rating: 4.5,
     numReviews: 320,
-    images: ["https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/81tmCrtiRgL._SL1500_.jpg"],
     description: "AMD Ryzen 5 7640HS, NVIDIA GeForce RTX 4050 6GB graphics, 144Hz IPS display, OMEN Gaming Hub, and upgraded thermal pipes."
   },
   {
@@ -708,7 +708,7 @@ const rawProducts = [
     stock: 25,
     rating: 4.5,
     numReviews: 290,
-    images: ["https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/51cqNSh6F0L._SL1500_.jpg"],
     description: "High-capacity ink tank printer with Wi-Fi, self-healing smart connection, up to 12,000 black and 6,000 color pages in box."
   },
   {
@@ -719,7 +719,7 @@ const rawProducts = [
     stock: 12,
     rating: 4.8,
     numReviews: 65,
-    images: ["https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/81L4FC5jQoL._SL1500_.jpg"],
     description: "27-inch 4K UHD IPS panel, 144Hz refresh rate with 1ms response, HDMI 2.1, KVM switch, and custom ARGB rear glow."
   },
   {
@@ -730,7 +730,7 @@ const rawProducts = [
     stock: 35,
     rating: 4.8,
     numReviews: 180,
-    images: ["https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71B76Dp0iSL._SL1500_.jpg"],
     description: "Up to 120 hours of battery life, angled 53mm dynamic drivers, DTS Headphone:X Spatial Audio, and ultra-clear 10mm microphone."
   },
 
@@ -743,7 +743,7 @@ const rawProducts = [
     stock: 10,
     rating: 4.9,
     numReviews: 90,
-    images: ["https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71gVfCMgVUL._SL1500_.jpg"],
     description: "Seamless glass touchpad, capacitive touch function row, 16.3-inch 4K+ OLED InfinityEdge display, RTX 4060, and CNC aluminum."
   },
   {
@@ -754,7 +754,7 @@ const rawProducts = [
     stock: 15,
     rating: 4.8,
     numReviews: 140,
-    images: ["https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/81ChAod8d6L._SL1500_.jpg"],
     description: "Ultra-portable 1.19kg chassis, Intel Core Ultra 5 125H with NPU for AI, 13.4-inch FHD+ 120Hz display, and 18-hour battery."
   },
   {
@@ -765,7 +765,7 @@ const rawProducts = [
     stock: 12,
     rating: 4.8,
     numReviews: 85,
-    images: ["https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/81tmCrtiRgL._SL1500_.jpg"],
     description: "Intel Core Ultra 9 185H, NVIDIA GeForce RTX 4070 8GB, 240Hz QHD+ display, Cryo-tech cooling, and stealth mode button."
   },
   {
@@ -776,7 +776,7 @@ const rawProducts = [
     stock: 22,
     rating: 4.6,
     numReviews: 165,
-    images: ["https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/313p9ZcJvHL._SL1500_.jpg"],
     description: "16-inch 2.5K 16:10 display, Intel Core i7 13th Gen, 16GB DDR5, 1TB SSD, quad speakers with Waves MaxxAudio Pro."
   },
   {
@@ -787,7 +787,7 @@ const rawProducts = [
     stock: 28,
     rating: 4.5,
     numReviews: 280,
-    images: ["https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/81tmCrtiRgL._SL1500_.jpg"],
     description: "Retro color aesthetic, Intel Core i5 13th Gen, NVIDIA GeForce RTX 3050 6GB, 120Hz FHD panel, and Game Shift thermal boost."
   },
   {
@@ -798,7 +798,7 @@ const rawProducts = [
     stock: 14,
     rating: 4.9,
     numReviews: 95,
-    images: ["https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71j03BJizxL._SL1500_.jpg"],
     description: "World's first 31.5-inch 4K monitor with IPS Black technology (2000:1 contrast ratio), 90W USB-C PD, RJ45 Ethernet, and built-in KVM."
   },
   {
@@ -809,7 +809,7 @@ const rawProducts = [
     stock: 18,
     rating: 4.6,
     numReviews: 50,
-    images: ["https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/61FpBOJiWHL._SL1500_.jpg"],
     description: "AI-based active noise cancellation microphone, smart headband sensor, multi-point Bluetooth 5.3, and up to 78 hours battery."
   },
   {
@@ -820,7 +820,7 @@ const rawProducts = [
     stock: 30,
     rating: 4.7,
     numReviews: 85,
-    images: ["https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/61FmZfG48BL._SL1500_.jpg"],
     description: "4K wireless and 8K wired polling rate, 26,000 DPI optical sensor, optical switches, ultra-lightweight 60g symmetrical build."
   },
 
@@ -833,7 +833,7 @@ const rawProducts = [
     stock: 10,
     rating: 4.9,
     numReviews: 120,
-    images: ["https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/81E3dq-M3ML._SL1500_.jpg"],
     description: "CNC aluminum chassis with Slash Lighting. Intel Core Ultra 9, NVIDIA RTX 4080, 2.5K 240Hz ROG Nebula OLED display."
   },
   {
@@ -844,7 +844,7 @@ const rawProducts = [
     stock: 20,
     rating: 4.8,
     numReviews: 190,
-    images: ["https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/61f8Co8YS2L._SL1500_.jpg"],
     description: "AMD Ryzen Z1 Extreme, upgraded 80Wh battery, 24GB LPDDR5X RAM, 1TB SSD, 7-inch 120Hz VRR display, and dual USB-C ports."
   },
   {
@@ -855,7 +855,7 @@ const rawProducts = [
     stock: 22,
     rating: 4.7,
     numReviews: 170,
-    images: ["https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/81IMnbIglGL._SL1500_.jpg"],
     description: "Sleek 1.2kg ultrabook with Intel Core Ultra 7 155H, 3K 120Hz Lumina OLED display, 75Wh battery, and Harman Kardon Dolby Atmos sound."
   },
   {
@@ -866,7 +866,7 @@ const rawProducts = [
     stock: 35,
     rating: 4.6,
     numReviews: 340,
-    images: ["https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/81fyeRNwpKL._SL1500_.jpg"],
     description: "Military-grade durability, Intel Core i7 13th Gen, NVIDIA GeForce RTX 4050 6GB, 144Hz IPS display, and 90Wh battery."
   },
   {
@@ -877,7 +877,7 @@ const rawProducts = [
     stock: 18,
     rating: 4.7,
     numReviews: 95,
-    images: ["https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/713RoW0SJcL._SL1500_.jpg"],
     description: "Copilot+ PC powered by Qualcomm Snapdragon X Elite with 45 TOPS NPU, 3K 120Hz OLED screen, and over 18 hours of real-world battery."
   },
   {
@@ -888,7 +888,7 @@ const rawProducts = [
     stock: 8,
     rating: 4.9,
     numReviews: 60,
-    images: ["https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/61rpZTslNtL._SL1500_.jpg"],
     description: "32-inch 4K QD-OLED panel, blazing 240Hz refresh rate, 0.03ms response time, custom heatsink with graphene film, and Type-C 90W PD."
   },
   {
@@ -899,7 +899,7 @@ const rawProducts = [
     stock: 20,
     rating: 4.8,
     numReviews: 110,
-    images: ["https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71Gg832c7QL._SL1500_.jpg"],
     description: "Gasket mount with silicon foam dampening, hot-swappable ROG NX switches, OLED display screen with 3-way control knob."
   },
   {
@@ -910,7 +910,7 @@ const rawProducts = [
     stock: 25,
     rating: 4.6,
     numReviews: 85,
-    images: ["https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71B76Dp0iSL._SL1500_.jpg"],
     description: "Dual-mode 2.4 GHz ultra-low latency & Bluetooth, Dirac Opteo audio optimization, bone-conduction AI mics, and hybrid ANC."
   },
 
@@ -923,7 +923,7 @@ const rawProducts = [
     stock: 8,
     rating: 4.9,
     numReviews: 80,
-    images: ["https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/81tmCrtiRgL._SL1500_.jpg"],
     description: "Intel Core i9 14900HX, NVIDIA GeForce RTX 4090 16GB, 16-inch WQXGA 240Hz PureSight Gaming display, and Legion ColdFront vapor cooling."
   },
   {
@@ -934,7 +934,7 @@ const rawProducts = [
     stock: 12,
     rating: 4.9,
     numReviews: 115,
-    images: ["https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/31MrCemFpjL._SL1500_.jpg"],
     description: "Legendary business executive laptop. Carbon-fiber reinforced chassis, Intel Core Ultra 7, Communications Bar with 8MP webcam, and TrackPoint."
   },
   {
@@ -945,7 +945,7 @@ const rawProducts = [
     stock: 15,
     rating: 4.8,
     numReviews: 90,
-    images: ["https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/81ChAod8d6L._SL1500_.jpg"],
     description: "Copilot+ PC, 14.5-inch 3K 90Hz PureSight OLED touch display, Snapdragon X Elite with 45 TOPS NPU, and ultra-slim 12.9mm design."
   },
   {
@@ -956,7 +956,7 @@ const rawProducts = [
     stock: 32,
     rating: 4.5,
     numReviews: 290,
-    images: ["https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/81ChAod8d6L._SL1500_.jpg"],
     description: "Intel Core i5 13th Gen, NVIDIA GeForce RTX 3050 6GB, 15.6-inch 144Hz FHD G-SYNC display, and Lenovo LA1 AI chip."
   },
   {
@@ -967,7 +967,7 @@ const rawProducts = [
     stock: 25,
     rating: 4.6,
     numReviews: 170,
-    images: ["https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71XsGusqSWL._SL1500_.jpg"],
     description: "12.7-inch 3K display, quad JBL speakers with Dolby Atmos, MediaTek Dimensity 7050, 10200mAh battery, and bundled Lenovo Tab Pen Plus."
   },
   {
@@ -978,7 +978,7 @@ const rawProducts = [
     stock: 14,
     rating: 4.7,
     numReviews: 110,
-    images: ["https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/51CbTgXPNRL._SL1500_.jpg"],
     description: "8.8-inch QHD+ 144Hz PureSight gaming display, AMD Ryzen Z1 Extreme, detachable TrueStrike controllers with FPS mouse mode."
   },
   {
@@ -989,7 +989,7 @@ const rawProducts = [
     stock: 16,
     rating: 4.7,
     numReviews: 70,
-    images: ["https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/81L4FC5jQoL._SL1500_.jpg"],
     description: "Thunderbolt 4 monitor with 99.1% DCI-P3 and 99.5% Adobe RGB color gamut, factory calibration, daisy-chaining, and KVM switch."
   },
   {
@@ -1000,7 +1000,7 @@ const rawProducts = [
     stock: 35,
     rating: 4.5,
     numReviews: 130,
-    images: ["https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/61FmZfG48BL._SL1500_.jpg"],
     description: "Ultra-lightweight 69g design, Pixart 3370 19,000 DPI sensor, optical micro-switches rated for 80M clicks, and 2.4GHz + BT 5.0."
   },
 
@@ -1013,7 +1013,7 @@ const rawProducts = [
     stock: 15,
     rating: 4.9,
     numReviews: 190,
-    images: ["https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/815IEApVGvL._SL1500_.jpg"],
     description: "Quad 50MP Leica Summilux lens camera with stepless variable aperture on 1-inch LYT-900 sensor, WQHD+ 120Hz LTPO AMOLED, and Snapdragon 8 Gen 3."
   },
   {
@@ -1024,7 +1024,7 @@ const rawProducts = [
     stock: 22,
     rating: 4.8,
     numReviews: 230,
-    images: ["https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/815IEApVGvL._SL1500_.jpg"],
     description: "Compact 6.36-inch 120Hz LTPO display, Leica professional triple camera, Snapdragon 8 Gen 3, and 90W HyperCharge with 50W wireless."
   },
   {
@@ -1035,7 +1035,7 @@ const rawProducts = [
     stock: 45,
     rating: 4.7,
     numReviews: 480,
-    images: ["https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/718NxFsqHOL._SL1500_.jpg"],
     description: "200MP OIS camera, 3D Curved 1.5K AMOLED 120Hz display, IP68 water resistance, MediaTek Dimensity 7200 Ultra, and 120W HyperCharge."
   },
   {
@@ -1046,7 +1046,7 @@ const rawProducts = [
     stock: 50,
     rating: 4.5,
     numReviews: 520,
-    images: ["https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/718NxFsqHOL._SL1500_.jpg"],
     description: "Super-slim 7.6mm body, 108MP pro camera, 120Hz AMOLED bezel-less screen, and MediaTek Dimensity 6080 5G chipset."
   },
   {
@@ -1057,7 +1057,7 @@ const rawProducts = [
     stock: 30,
     rating: 4.8,
     numReviews: 310,
-    images: ["https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71kqkb77SjL._SL1500_.jpg"],
     description: "11-inch 2.8K 144Hz display, all-metal unibody design, quad speakers with Dolby Atmos, 8840mAh battery, and stylus support."
   },
   {
@@ -1068,7 +1068,7 @@ const rawProducts = [
     stock: 35,
     rating: 4.5,
     numReviews: 240,
-    images: ["https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/61dywKQasaL._SL1500_.jpg"],
     description: "1.97-inch AMOLED 60Hz display, aluminum alloy middle frame, rotating stainless steel crown, built-in multi-system GPS, and 20 days battery."
   },
   {
@@ -1079,7 +1079,7 @@ const rawProducts = [
     stock: 40,
     rating: 4.6,
     numReviews: 190,
-    images: ["https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/51uxqujOBKL._SL1500_.jpg"],
     description: "52dB active noise cancellation with 4kHz ultra-wide frequency band, coaxial dual drivers, LDAC certified Hi-Res audio, and 38-hour battery."
   },
   {
@@ -1090,7 +1090,7 @@ const rawProducts = [
     stock: 12,
     rating: 4.7,
     numReviews: 140,
-    images: ["https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/81O3Otf3bPL._SL1500_.jpg"],
     description: "4K Quantum Dot display with Dolby Vision IQ, 30W speaker system with Dolby Audio, Google TV operating system, and metallic bezel-less frame."
   },
 
@@ -1103,7 +1103,7 @@ const rawProducts = [
     stock: 20,
     rating: 4.9,
     numReviews: 650,
-    images: ["https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71TucbUXCHL._SL1500_.jpg"],
     description: "Slim design with 1TB SSD storage, ray tracing, 4K-TV gaming at up to 120fps, Tempest 3D AudioTech, and DualSense haptic feedback."
   },
   {
@@ -1114,7 +1114,7 @@ const rawProducts = [
     stock: 25,
     rating: 4.8,
     numReviews: 110,
-    images: ["https://images.unsplash.com/photo-1592840496694-26d035b52b48?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/516ZUBrUYEL._SL1500_.jpg"],
     description: "High-performance customizable controller for PS5. Changeable stick caps, remappable back buttons, and adjustable trigger stops."
   },
   {
@@ -1125,7 +1125,7 @@ const rawProducts = [
     stock: 30,
     rating: 4.9,
     numReviews: 540,
-    images: ["https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/61O3iMlnJIL._SL1500_.jpg"],
     description: "Industry-leading noise cancellation with dual processors and 8 microphones, 30-hour battery life, speak-to-chat, and crystal-clear hands-free calls."
   },
   {
@@ -1136,7 +1136,7 @@ const rawProducts = [
     stock: 35,
     rating: 4.8,
     numReviews: 320,
-    images: ["https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/61GJAFdM9pL._SL1500_.jpg"],
     description: "Dynamic Driver X for rich vocals and deep bass, Integrated Processor V2 with HD Noise Cancelling Processor QN2e, and bone conduction mics."
   },
   {
@@ -1147,7 +1147,7 @@ const rawProducts = [
     stock: 6,
     rating: 4.9,
     numReviews: 85,
-    images: ["https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/81udrKi0c3L._SL1500_.jpg"],
     description: "Cognitive Processor XR, pure OLED contrast with XR OLED Contrast Pro, Acoustic Surface Audio+, Google TV, and perfect for PS5."
   },
   {
@@ -1158,7 +1158,7 @@ const rawProducts = [
     stock: 18,
     rating: 4.7,
     numReviews: 95,
-    images: ["https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/41x4-FBtJZL._SL1500_.jpg"],
     description: "360 Spatial Sound for gaming, Dual Noise Sensor ANC with Ambient Sound mode, soft leatherette ear pads, and Discord-certified mic."
   },
   {
@@ -1169,7 +1169,7 @@ const rawProducts = [
     stock: 10,
     rating: 4.7,
     numReviews: 60,
-    images: ["https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/7126jVP-TsL._SL1500_.jpg"],
     description: "Exmor T for mobile sensor, continuous optical telephoto 85-170mm zoom, Bravia tuned OLED display, and dedicated two-stage shutter button."
   },
   {
@@ -1180,7 +1180,7 @@ const rawProducts = [
     stock: 20,
     rating: 4.8,
     numReviews: 110,
-    images: ["https://images.unsplash.com/photo-1545454675-3531b543be5d?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/81ONMqT6kDL._SL1500_.jpg"],
     description: "X-Balanced speaker units, MEGA BASS with live sound mode, IP67 water and dust resistance, retractable handle, and ambient ring lighting."
   },
 
@@ -1193,7 +1193,7 @@ const rawProducts = [
     stock: 30,
     rating: 4.7,
     numReviews: 310,
-    images: ["https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71K0aSeGDBL._SL1500_.jpg"],
     description: "Iconic Glyph Interface with customized LED light patterns, Snapdragon 8+ Gen 1, 6.7-inch 120Hz LTPO OLED, and Nothing OS 2.5."
   },
   {
@@ -1204,7 +1204,7 @@ const rawProducts = [
     stock: 35,
     rating: 4.6,
     numReviews: 240,
-    images: ["https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/61XS3YRaPsL._SL1500_.jpg"],
     description: "Exclusive MediaTek Dimensity 7350 Pro 5G processor, metallic finish design, dual 50MP rear cameras with 50MP selfie, and 50W fast charge."
   },
   {
@@ -1215,7 +1215,7 @@ const rawProducts = [
     stock: 50,
     rating: 4.5,
     numReviews: 380,
-    images: ["https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/61K37GFEP8L._SL1500_.jpg"],
     description: "Interchangeable back case with custom accessory mounting point, 6.67-inch 120Hz Super AMOLED, Dimensity 7300 5G, and 50MP Sony camera."
   },
   {
@@ -1226,7 +1226,7 @@ const rawProducts = [
     stock: 40,
     rating: 4.7,
     numReviews: 190,
-    images: ["https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/51uxqujOBKL._SL1500_.jpg"],
     description: "Bold bubble transparent case design, 45dB Smart Active Noise Cancellation, custom 11mm dynamic driver with Hi-Res Audio, and 42.5 hours battery."
   },
   {
@@ -1237,7 +1237,7 @@ const rawProducts = [
     stock: 45,
     rating: 4.5,
     numReviews: 210,
-    images: ["https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/61dywKQasaL._SL1500_.jpg"],
     description: "Interchangeable bezel design, 1.32-inch AMOLED display with auto-brightness, functional crown, built-in multi-system GPS, and Bluetooth calls."
   },
 
@@ -1250,7 +1250,7 @@ const rawProducts = [
     stock: 18,
     rating: 4.9,
     numReviews: 240,
-    images: ["https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/41s015PPoVL._SL1500_.jpg"],
     description: "World-class active noise cancellation, revolutionary Bose Immersive Audio, CustomTune technology that personalizes sound to your ear, and 24 hours battery."
   },
   {
@@ -1261,7 +1261,7 @@ const rawProducts = [
     stock: 22,
     rating: 4.8,
     numReviews: 180,
-    images: ["https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/41s015PPoVL._SL1500_.jpg"],
     description: "Spatial audio with Bose Immersive Sound, world-class noise cancellation, 9 ear tip combinations for comfortable fit, and IPX4 sweat resistance."
   },
   {
@@ -1272,7 +1272,7 @@ const rawProducts = [
     stock: 14,
     rating: 4.9,
     numReviews: 75,
-    images: ["https://images.unsplash.com/photo-1545454675-3531b543be5d?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71EO8a4NofL._SL1500_.jpg"],
     description: "Deep, room-shaking stereo sound, built-in soft rope handle, IP67 dust and waterproof build, and up to 20 hours of continuous battery life."
   },
   {
@@ -1283,7 +1283,7 @@ const rawProducts = [
     stock: 10,
     rating: 4.8,
     numReviews: 90,
-    images: ["https://images.unsplash.com/photo-1545454675-3531b543be5d?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/51K1eC2y7RL._SL1500_.jpg"],
     description: "Dolby Atmos with proprietary TrueSpace technology, upward-firing transducers for immersive ceiling-reflected height channels, and Wi-Fi streaming."
   },
 
@@ -1296,7 +1296,7 @@ const rawProducts = [
     stock: 24,
     rating: 4.8,
     numReviews: 120,
-    images: ["https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-mini-finish-select-202410-blue-wifi?wid=940&hei=1112&fmt=png-alpha&qlt=80"],
+    images: ["https://m.media-amazon.com/images/I/61Tix2-t7iL._SL1500_.jpg"],
     description: "Compact 8.3-inch Liquid Retina display powered by the A17 Pro chip with Apple Intelligence, Apple Pencil Pro support, and Wi-Fi 6E."
   },
   {
@@ -1307,7 +1307,7 @@ const rawProducts = [
     stock: 28,
     rating: 4.6,
     numReviews: 150,
-    images: ["https://images.samsung.com/is/image/samsung/p6pim/in/sm-x610nzaainu/gallery/in-galaxy-tab-s9-fe-plus-x610-sm-x610nzaainu-thumb-538654879?$216_216_PNG$"],
+    images: ["https://m.media-amazon.com/images/I/71XsGusqSWL._SL1500_.jpg"],
     description: "12.4-inch immersive 90Hz screen, IP68 water resistance, dual AKG speakers, 10090mAh battery, and bundled water-resistant S Pen."
   },
   {
@@ -1329,7 +1329,7 @@ const rawProducts = [
     stock: 45,
     rating: 4.7,
     numReviews: 130,
-    images: ["https://oasis.opstatics.com/content/dam/oasis/page/2023/accessories/80w-car-charger.png"],
+    images: ["https://m.media-amazon.com/images/I/61UCFe0Tv3L._SL1500_.jpg"],
     description: "Fast charging on the road. Dual ports with USB-A and USB-C output, intelligent power distribution, and multi-layer thermal protection."
   },
   {
@@ -1340,7 +1340,7 @@ const rawProducts = [
     stock: 6,
     rating: 4.9,
     numReviews: 140,
-    images: ["https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/71s0d7ImwFL._SL1500_.jpg"],
     description: "33MP back-illuminated Exmor R CMOS sensor, 4K 60p 10-bit 4:2:2 video, real-time eye AF for humans/animals/birds, and 5-axis in-body stabilization."
   },
   {
@@ -1351,7 +1351,7 @@ const rawProducts = [
     stock: 18,
     rating: 4.8,
     numReviews: 65,
-    images: ["https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/613lNFyR5ZL._SL1500_.jpg"],
     description: "Pre-lubed ROG RX Low-Profile Optical Switches, interactive touch panel, 2.4 GHz SpeedNova wireless, and protective travel cover."
   },
   {
@@ -1362,7 +1362,7 @@ const rawProducts = [
     stock: 35,
     rating: 4.6,
     numReviews: 110,
-    images: ["https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/51IpsJmhInL._SL1500_.jpg"],
     description: "Sony STARVIS sensor for exceptional low-light clarity, 2K QHD 30fps / 1080p 60fps, AI auto-framing, and noise reduction microphone."
   },
   {
@@ -1373,7 +1373,7 @@ const rawProducts = [
     stock: 40,
     rating: 4.5,
     numReviews: 95,
-    images: ["https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/51XD9xBDB8L._SL1500_.jpg"],
     description: "Connect up to 3 devices with seamless cursor flow, 7 programmable buttons, hyper-fast scroll wheel, and up to 12 weeks of battery."
   },
   {
@@ -1384,7 +1384,7 @@ const rawProducts = [
     stock: 50,
     rating: 4.7,
     numReviews: 160,
-    images: ["https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/313p9ZcJvHL._SL1500_.jpg"],
     description: "Water-repellent armored exterior, fidlock magnetic buckle, fits up to 17-inch gaming laptops, with multiple organized tech compartments."
   },
   {
@@ -1395,7 +1395,7 @@ const rawProducts = [
     stock: 16,
     rating: 4.8,
     numReviews: 210,
-    images: ["https://images.unsplash.com/photo-1545454675-3531b543be5d?w=600&auto=format&fit=crop&q=80"],
+    images: ["https://m.media-amazon.com/images/I/81stTfpLJyL._SL1500_.jpg"],
     description: "True 360-degree deep acoustic coverage, flexible fabric handle, IP55 water and dust resistance, and 17 hours of battery life."
   }
 ]
