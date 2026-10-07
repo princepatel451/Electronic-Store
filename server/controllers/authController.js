@@ -32,15 +32,20 @@ const registerUser = async(req, res) => {
             name, email, password: hashedPassword, role
         })
 
+        const token = generateToken(user._id)
+
+        const userResponse = {
+            id: user._id,
+            name: user.name,
+            email: user.email,
+            role: user.role
+        }
+
         res.status(201).json({
             success: true,
             message: "User Registered Successfully",
-            user: {
-                id : user._id,
-                name: user.name,
-                email: user.email,
-                role: user.role
-            }
+            token,
+            user: userResponse
         })
 
 
@@ -82,7 +87,13 @@ const loginUser = async(req, res) => {
         res.status(200).json({
             success: true,
             message: "Login Successful",
-            token
+            token,
+            user: {
+                id: user._id,
+                name: user.name,
+                email: user.email,
+                role: user.role
+            }
         })
     }
     catch(error){
